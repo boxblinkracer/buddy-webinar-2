@@ -16,7 +16,6 @@ install: ## Installs all production dependencies
 	@composer install --no-dev
 
 dev: ## Installs all dev dependencies
-	php switch-composer.php dev
 	@composer validate
 	@composer install
 
@@ -25,10 +24,6 @@ clean: ## Cleans all dependencies
 	rm -rf .reports | true
 	rm -rf ./src/Resources/app/administration/node_modules/*
 	rm -rf ./src/Resources/app/storefront/node_modules/*
-
-fixtures: ## Installs all available testing fixtures of the Mollie plugin
-	cd /var/www/html && php bin/console cache:clear
-	cd /var/www/html && php bin/console fixture:load
 
 build: ## Installs the plugin, and builds the artifacts using the Shopware build commands (requires Shopware)
 	cd /var/www/html && php bin/console plugin:refresh
@@ -39,3 +34,8 @@ build: ## Installs the plugin, and builds the artifacts using the Shopware build
 	cd /var/www/html && php bin/console theme:refresh
 	cd /var/www/html && php bin/console theme:compile
 	cd /var/www/html && php bin/console theme:refresh
+
+# ------------------------------------------------------------------------------------------------------------
+
+stan: ## Starts PHPStan
+	php vendor/bin/phpstan analyse -c ./.phpstan.neon

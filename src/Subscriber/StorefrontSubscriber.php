@@ -28,7 +28,7 @@ class StorefrontSubscriber implements EventSubscriberInterface
     /**
      * @inheritDoc
      */
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return [
             StorefrontRenderEvent::class => 'onStorefrontRender',
@@ -38,7 +38,7 @@ class StorefrontSubscriber implements EventSubscriberInterface
     /**
      * @param StorefrontRenderEvent $event
      */
-    public function onStorefrontRender(StorefrontRenderEvent $event)
+    public function onStorefrontRender(StorefrontRenderEvent $event): void
     {
         $active = $this->configService->get('NotificationCenter.config.active');
         $text = $this->configService->get('NotificationCenter.config.text');
