@@ -24,7 +24,7 @@ context("Plugin Config", () => {
 
     context(devices.getDescription(device), () => {
 
-        it('Notification Text can be activated', () => {
+        it('C1: Text can be displayed in Storefront', () => {
 
             adminLogin.login();
             pluginAction.openPluginConfiguration();
@@ -35,17 +35,19 @@ context("Plugin Config", () => {
 
             cy.visit('/');
             cy.contains('Cypress Test Notification');
+        })
 
+        it('Text not displayed if inactive', () => {
 
-            adminLogin.openAdmin();
+            adminLogin.login();
             pluginAction.openPluginConfiguration();
 
             pluginAction.setActive(false);
+            pluginAction.setText('Cypress Test Notification');
             pluginAction.saveSettings();
 
             cy.visit('/');
             cy.contains('#notificationCenter-cy-text').should('not.exist');
-
         })
 
     })
