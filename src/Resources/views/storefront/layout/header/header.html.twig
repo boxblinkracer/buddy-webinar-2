@@ -1,0 +1,19 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+
+ {% block layout_header_navigation %}
+     {{ parent() }}
+     {% if notificationCenter.active %}
+         <div class="notificationCenter-cy-text"
+              style="
+                      padding: 12px;
+                      background: {{ notificationCenter.color.background }};
+                      color: {{ notificationCenter.color.text }};
+                      font-size: 20px;
+                      font-weight: bold;
+                      text-align: center;
+                      border-radius: 18px;
+                      ">
+             {{ notificationCenter.text }}
+         </div>
+     {% endif %}
+ {% endblock %}

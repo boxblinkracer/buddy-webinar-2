@@ -1,0 +1,70 @@
+{
+  "name": "boxblinkracer/notification-center",
+  "description": "Notification Center",
+  "version": "v1.0.0",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christian Dangl"
+    }
+  ],
+  "extra": {
+    "shopware-plugin-class": "boxblinkracer\\NotificationCenter\\NotificationCenter",
+    "copyright": "(c) by Christian Dangl",
+    "label": {
+      "de-DE": "Notification Center",
+      "en-GB": "Notification Center"
+    },
+    "description": {
+      "de-DE": "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc",
+      "en-GB": "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabbcabcabcabcabcabcabcabcabcabcabcacabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc"
+    },
+    "manufacturerLink": {
+      "de-DE": "",
+      "en-GB": ""
+    },
+    "supportLink": {
+      "de-DE": "",
+      "en-GB": ""
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "infection/extension-installer": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "boxblinkracer\\NotificationCenter\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+    }
+  },
+  "suggest": {
+    "shopware/storefront": "Require '*'. Enables features like Creditcard Components and iDeal issuer selector.",
+    "shopware/administration": "Require '*'. Enables features like partial shipping and refunding."
+  },
+  "conflict": {
+    "shopware/storefront": "<6,>=7",
+    "shopware/administration": "<6,>=7"
+  },
+  "require": {
+  },
+  "require-dev": {
+    "shopware/core": "*",
+    "shopware/administration": "*",
+    "shopware/storefront": "*"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "[ ! -f vendor/bin/phpcs ] || vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility"
+    ],
+    "post-update-cmd": [
+      "[ ! -f vendor/bin/phpcs ] || vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility"
+    ]
+  }
+}

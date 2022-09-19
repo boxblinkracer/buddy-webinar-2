@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>Notification Center Settings</title>
+        <title lang="de-DE">Notification Center Einstellungen</title>
+
+        <input-field type="bool">
+            <name>active</name>
+            <label>Active</label>
+            <label lang="de-DE">Aktiviert</label>
+        </input-field>
+
+        <input-field type="text">
+            <name>text</name>
+            <label>Text</label>
+            <defaultValue></defaultValue>
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>colorBackground</name>
+            <label>Background</label>
+            <defaultValue>#11a9d8</defaultValue>
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>colorText</name>
+            <label>Text</label>
+            <defaultValue>#ffffff</defaultValue>
+        </input-field>
+
+    </card>
+</config>
