@@ -17,8 +17,8 @@
       "en-GB": "Notification Center"
     },
     "description": {
-      "de-DE": "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc",
-      "en-GB": "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabbcabcabcabcabcabcabcabcabcabcabcacabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc"
+      "de-DE": "A sample notifications center that allows you to easily show notification messages inside the Storefront. You can also adjust colors, texts and more for your shop.",
+      "en-GB": "A sample notifications center that allows you to easily show notification messages inside the Storefront. You can also adjust colors, texts and more for your shop."
     },
     "manufacturerLink": {
       "de-DE": "",
