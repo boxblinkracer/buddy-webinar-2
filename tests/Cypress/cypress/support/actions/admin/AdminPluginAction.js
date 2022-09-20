@@ -24,7 +24,7 @@ export default class AdminPluginAction {
      * @param text
      */
     setText(text) {
-        cy.get('#NotificationCenter\\.config\\.text').clear().type(text);
+        cy.get('#NotificationCenter\\.config\\.text').clear().type(text, {force: true});
     }
 
     /**
@@ -33,7 +33,7 @@ export default class AdminPluginAction {
      */
     setBackgroundColor(hexCode) {
         const selector = '.sw-system-config--field-notification-center-config-color-background > .sw-colorpicker > .sw-field > .sw-block-field__block > .sw-colorpicker__input';
-        cy.get(selector).clear().type(hexCode);
+        cy.get(selector).clear().type(hexCode, {force: true});
     }
 
     /**
@@ -42,7 +42,7 @@ export default class AdminPluginAction {
      */
     setTextColor(hexCode) {
         const selector = '.sw-system-config--field-notification-center-config-color-text > .sw-colorpicker > .sw-field > .sw-block-field__block > .sw-colorpicker__input';
-        cy.get(selector).clear().type(hexCode);
+        cy.get(selector).clear().type(hexCode, {force: true});
     }
 
     /**
