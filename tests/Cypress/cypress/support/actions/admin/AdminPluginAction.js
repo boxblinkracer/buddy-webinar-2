@@ -49,7 +49,7 @@ export default class AdminPluginAction {
      *
      */
     saveSettings() {
-        cy.get('.sw-button').click();
+        cy.contains('Save').click();
     }
 
 }
