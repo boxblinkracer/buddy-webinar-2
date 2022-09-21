@@ -14,8 +14,8 @@ export default class AdminLoginAction {
 
         this.openAdmin();
 
-        cy.get('#sw-field--username').type('admin');
-        cy.get('#sw-field--password').type('shopware');
+        cy.get('#sw-field--username').type('admin', {force: true});
+        cy.get('#sw-field--password').type('shopware', {force: true});
 
         cy.get('.sw-button').click();
     }
